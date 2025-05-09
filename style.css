@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #001f3f, #0074D9);
+  animation: movebg 10s infinite linear;
+  color: white;
+}
+
+@keyframes movebg {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+.border-rgb {
+  border: 10px solid;
+  border-image: linear-gradient(45deg, red, green, blue, red) 1;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+.lang-toggle {
+  text-align: center;
+  margin-top: 10px;
+}
+
+button {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  font-size: 16px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin: 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.subject-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0,255,255,0.3);
+}
+
+.subject-card h2 {
+  margin-top: 0;
+}
+
+.subject-card a {
+  display: inline-block;
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+  background: #111;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.subject-card a:hover {
+  background: #00c6ff;
+  color: black;
+}
