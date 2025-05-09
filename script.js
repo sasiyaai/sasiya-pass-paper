@@ -12,7 +12,7 @@ const papers = [
   { subject: "maths", year: "2021", url: "https://drive.google.com/maths_2021.pdf" },
   { subject: "maths", year: "2020", url: "https://drive.google.com/maths_2020.pdf" },
 
-  { subject: "english", year: "2024", url: "https://drive.google.com/english_2024.pdf" },
+  { subject: "english", year: "2024", url: "https://www.paceinstitute.lk/past-papers/ordinary-level/2023/english-1.pdf" },
   { subject: "english", year: "2023", url: "https://drive.google.com/english_2023.pdf" },
   { subject: "english", year: "2022", url: "https://drive.google.com/english_2022.pdf" },
   { subject: "english", year: "2021", url: "https://drive.google.com/english_2021.pdf" },
