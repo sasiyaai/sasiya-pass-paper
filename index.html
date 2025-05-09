@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SASIYA O/L EXAM PAPER</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="border-rgb">
-    <div class="lang-toggle">
-      <button onclick="toggleLanguage()">සිංහල / English</button>
-    </div>
-    <header>
-      <h1>SASIYA O/L EXAM PAPER</h1>
-      <p id="subtitle">Select a subject to download past papers and answers.</p>
-    </header>
+  <header>
+    <h1>SASIYA O/L EXAM PAPER</h1>
+    <a href="https://wa.me/qr/565WB57Z4DYLG1" target="_blank" class="whatsapp-icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="40">
+    </a>
+  </header>
 
-    <main id="subjects">
-      <!-- Subjects and links will be added here -->
-    </main>
+  <div class="container">
+    <div class="filters">
+      <select id="subjectFilter">
+        <option value="all">All Subjects</option>
+        <option value="maths">Mathematics</option>
+        <option value="science">Science</option>
+        <option value="english">English</option>
+        <option value="sinhala">Sinhala</option>
+        <option value="history">History</option>
+      </select>
+
+      <select id="yearFilter">
+        <option value="all">All Years</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+      </select>
+    </div>
+
+    <div id="papers" class="paper-list">
+    </div>
   </div>
 
   <script src="script.js"></script>
