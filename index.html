@@ -1,38 +1,63 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SASIYA O/L EXAM PAPERS</title>
+  <title>SASIYA O/L EXAM PAPER</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>SASIYA O/L EXAM PAPERS</h1>
-    <input type="text" id="searchInput" placeholder="Search by subject or year...">
-    <div class="filters">
-      <select id="subjectFilter">
-        <option value="">All Subjects</option>
-        <option value="Math">Math</option>
-        <option value="Science">Science</option>
-        <option value="ICT">ICT</option>
-        <option value="History">History</option>
-      </select>
-      <select id="yearFilter">
-        <option value="">All Years</option>
-        <option value="2020">2020</option>
-        <option value="2021">2021</option>
-        <option value="2022">2022</option>
-        <option value="2023">2023</option>
-        <option value="2024">2024</option>
-      </select>
-    </div>
+    <h1>SASIYA O/L EXAM PAPER</h1>
+    <p class="tagline">සිංහල O/L විභාග පත්‍ර — 2020 සිට 2024 දක්වා</p>
+    <input type="text" id="searchBar" placeholder="විෂය හෝ වසර සෙවීමට..."/>
   </header>
+
+  <section class="filters">
+    <select id="subjectFilter">
+      <option value="">සියලු විෂයයන්</option>
+      <option>සිංහල භාෂාව</option>
+      <option>ගණිතය</option>
+      <option>විද්‍යාව</option>
+      <option>ඉතිහාසය</option>
+      <option>බුද්ධ ධර්මය</option>
+      <option>පරිගණක අධ්‍යයනය</option>
+      <option>භෞතික විද්‍යාව</option>
+      <option>ජීව විද්‍යාව</option>
+      <option>රසායන විද්‍යාව</option>
+      <option>භූගෝල විද්‍යාව</option>
+      <option>ගෘහ විද්‍යාව</option>
+      <option>වාණිජ විද්‍යාව</option>
+      <option>කලා</option>
+      <option>සංගීතය</option>
+      <option>නර්තනය</option>
+      <option>කෘෂිකර්මය</option>
+      <option>තාක්ෂණ විෂයයන්</option>
+    </select>
+
+    <select id="yearFilter">
+      <option value="">සියලු අවුරුදු</option>
+      <option>2024</option>
+      <option>2023</option>
+      <option>2022</option>
+      <option>2021</option>
+      <option>2020</option>
+    </select>
+  </section>
+
   <main id="paperList">
-    <!-- Papers will be inserted here by script.js -->
+    <!-- Sample card -->
+    <div class="paper-card" data-subject="ගණිතය" data-year="2024">
+      <h3>ගණිතය - 2024</h3>
+      <a href="https://example.com/maths2024.pdf" target="_blank">PDF බාගන්න</a>
+    </div>
+    <!-- Repeat this card format with real PDF links -->
   </main>
-  <a href="https://wa.me/qr/565WB57Z4DYLG1" target="_blank" class="whatsapp-icon">WhatsApp</a>
+
+  <a class="whatsapp-icon" href="https://wa.me/qr/565WB57Z4DYLG1" target="_blank" title="WhatsApp Contact">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
   <script src="script.js"></script>
 </body>
-</html>
+        </html>
