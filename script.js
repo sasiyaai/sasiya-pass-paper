@@ -1,65 +1,99 @@
-
-const papers = [
-  { subject: "sinhala", year: "2024", url: "https://drive.google.com/sinhala_2024.pdf" },
-  { subject: "sinhala", year: "2023", url: "https://drive.google.com/sinhala_2023.pdf" },
-  { subject: "sinhala", year: "2022", url: "https://drive.google.com/sinhala_2022.pdf" },
-  { subject: "sinhala", year: "2021", url: "https://drive.google.com/sinhala_2021.pdf" },
-  { subject: "sinhala", year: "2020", url: "https://drive.google.com/sinhala_2020.pdf" },
-
-  { subject: "maths", year: "2024", url: "https://drive.google.com/maths_2024.pdf" },
-  { subject: "maths", year: "2023", url: "https://drive.google.com/maths_2023.pdf" },
-  { subject: "maths", year: "2022", url: "https://drive.google.com/maths_2022.pdf" },
-  { subject: "maths", year: "2021", url: "https://drive.google.com/maths_2021.pdf" },
-  { subject: "maths", year: "2020", url: "https://drive.google.com/maths_2020.pdf" },
-
-  { subject: "english", year: "2024", url: "https://www.paceinstitute.lk/past-papers/ordinary-level/2023/english-1.pdf" },
-  { subject: "english", year: "2023", url: "https://drive.google.com/english_2023.pdf" },
-  { subject: "english", year: "2022", url: "https://drive.google.com/english_2022.pdf" },
-  { subject: "english", year: "2021", url: "https://drive.google.com/english_2021.pdf" },
-  { subject: "english", year: "2020", url: "https://drive.google.com/english_2020.pdf" },
-
-  { subject: "science", year: "2024", url: "https://drive.google.com/science_2024.pdf" },
-  { subject: "science", year: "2023", url: "https://drive.google.com/science_2023.pdf" },
-  { subject: "science", year: "2022", url: "https://drive.google.com/science_2022.pdf" },
-  { subject: "science", year: "2021", url: "https://drive.google.com/science_2021.pdf" },
-  { subject: "science", year: "2020", url: "https://drive.google.com/science_2020.pdf" },
-
-  { subject: "history", year: "2024", url: "https://drive.google.com/history_2024.pdf" },
-  { subject: "history", year: "2023", url: "https://drive.google.com/history_2023.pdf" },
-  { subject: "history", year: "2022", url: "https://drive.google.com/history_2022.pdf" },
-  { subject: "history", year: "2021", url: "https://drive.google.com/history_2021.pdf" },
-  { subject: "history", year: "2020", url: "https://drive.google.com/history_2020.pdf" }
-];
-
-const paperContainer = document.getElementById("papers");
-const subjectFilter = document.getElementById("subjectFilter");
-const yearFilter = document.getElementById("yearFilter");
-
-function displayPapers() {
-  paperContainer.innerHTML = '';
-  const subject = subjectFilter.value;
-  const year = yearFilter.value;
-
-  const filtered = papers.filter(p =>
-    (subject === "all" || p.subject === subject) &&
-    (year === "all" || p.year === year)
-  );
-
-  filtered.forEach(p => {
-    const btn = document.createElement("a");
-    btn.href = p.url;
-    btn.textContent = `${capitalize(p.subject)} - ${p.year}`;
-    btn.className = "paper-btn";
-    btn.target = "_blank";
-    paperContainer.appendChild(btn);
-  });
-}
-
-function capitalize(s) {
-  return s.charAt(0).toUpperCase() + s.slice(1);
-}
-
-subjectFilter.addEventListener("change", displayPapers);
-yearFilter.addEventListener("change", displayPapers);
-
-displayPapers();
+<!DOCTYPE html><html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SASIYA O/L Past Papers</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #0ff;
+    }
+    .search-bar {
+      text-align: center;
+      margin: 20px 0;
+    }
+    #searchInput {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      width: 300px;
+    }
+    .subject-section {
+      margin: 40px 0;
+      padding: 20px;
+      border-radius: 20px;
+      border: 2px solid;
+      border-image: linear-gradient(45deg, red, blue, lime) 1;
+      box-shadow: 0 0 20px rgba(0,255,255,0.3);
+    }
+    .pdf-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .download-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      background: #1a1a1a;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid;
+      border-image: linear-gradient(45deg, red, blue, lime) 1;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    .download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0,255,255,0.6);
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>SASIYA O/L Past Papers 2020 - 2024</h1>  <div class="search-bar">
+    <input type="text" id="searchInput" onkeyup="filterPapers()" placeholder="Search subject or year...">
+  </div>  <div class="subject-section">
+    <h2>Mathematics (ගණිතය)</h2>
+    <div class="pdf-links">
+      <a href="https://drive.google.com/uc?export=download&id=1xEz4Gz0RnFAkBMcETyItEVGmtF3nlsJx" class="download-btn" target="_blank">2020 Sinhala</a>
+      <a href="https://drive.google.com/uc?export=download&id=1G8a0E8g1K4X0x5xPCkpF01lYzVm-ySeG" class="download-btn" target="_blank">2020 English</a>
+      <a href="https://drive.google.com/uc?export=download&id=12p_BJZQ9KzkmjzIKn90M7REeIf7G7uEr" class="download-btn" target="_blank">2021 Sinhala</a>
+    </div>
+  </div>  <div class="subject-section">
+    <h2>Science (විද්‍යාව)</h2>
+    <div class="pdf-links">
+      <a href="https://drive.google.com/uc?export=download&id=1pRiHxYk6zQ-XuMTWAWhu_Bj7pMZ8nBli" class="download-btn" target="_blank">2020 Sinhala</a>
+      <a href="https://drive.google.com/uc?export=download&id=1_WBdp-q5J7NAlacRTI04aGHZ0rOlv-WR" class="download-btn" target="_blank">2020 English</a>
+    </div>
+  </div>  <div class="subject-section">
+    <h2>Buddhism (බුද්ධ ධර්මය)</h2>
+    <div class="pdf-links">
+      <a href="https://drive.google.com/uc?export=download&id=1O2cBlvJ6e7I0VE4f6iPzS5n2MgSzrQp8" class="download-btn" target="_blank">2020 Sinhala</a>
+    </div>
+  </div>  <div class="subject-section">
+    <h2>History (ඉතිහාසය)</h2>
+    <div class="pdf-links">
+      <a href="https://drive.google.com/uc?export=download&id=1nItkK3MDnH5yaGZiv_MGoerZxN9u1DTF" class="download-btn" target="_blank">2020 Sinhala</a>
+    </div>
+  </div>  <div class="subject-section">
+    <h2>ICT (තොරතුරු හා සන්නිවේදන තාක්ෂණය)</h2>
+    <div class="pdf-links">
+      <a href="https://drive.google.com/uc?export=download&id=1GKb0PImEwAaSg4fYbVKZsQ-SXpTrYXmV" class="download-btn" target="_blank">2020 Sinhala</a>
+    </div>
+  </div>  <div class="subject-section">
+    <h2>Business Studies (ව්‍යාපාර අධ්‍යයනය)</h2>
+    <div class="pdf-links">
+      <a href="https://drive.google.com/uc?export=download&id=1fXzVMB8gxCdjxFe7PqBaWYrh0lNwCTLa" class="download-btn" target="_blank">2020 Sinhala</a>
+    </div>
+  </div></body>
+</html>
