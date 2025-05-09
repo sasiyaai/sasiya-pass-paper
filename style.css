@@ -1,77 +1,65 @@
+
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #001f3f, #0074D9);
-  animation: movebg 10s infinite linear;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
   color: white;
 }
-
-@keyframes movebg {
-  0% { background-position: 0 0; }
-  100% { background-position: 100% 100%; }
-}
-
-.border-rgb {
-  border: 10px solid;
-  border-image: linear-gradient(45deg, red, green, blue, red) 1;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 20px;
-}
-
 header {
-  text-align: center;
-}
-
-.lang-toggle {
-  text-align: center;
-  margin-top: 10px;
-}
-
-button {
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  border: none;
-  padding: 12px 20px;
-  color: white;
-  font-size: 16px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  margin: 10px;
-}
-
-button:hover {
-  transform: scale(1.1);
-}
-
-.subject-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 20px;
-  margin: 10px auto;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 0 15px rgba(0,255,255,0.3);
-}
-
-.subject-card h2 {
-  margin-top: 0;
-}
-
-.subject-card a {
-  display: inline-block;
-  margin: 5px;
-  text-decoration: none;
-  color: white;
   background: #111;
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  padding: 20px;
+  text-align: center;
+  position: relative;
 }
-
-.subject-card a:hover {
-  background: #00c6ff;
-  color: black;
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  background: linear-gradient(45deg, red, green, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.whatsapp-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  filter: drop-shadow(0 0 5px lime);
+}
+.container {
+  padding: 20px;
+}
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+select {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 10px;
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+}
+.paper-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.paper-btn {
+  padding: 15px;
+  background: #1a1a1a;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid;
+  border-image: linear-gradient(45deg, red, green, blue) 1;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.paper-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0,255,255,0.5), 0 0 20px rgba(255,0,255,0.3);
 }
